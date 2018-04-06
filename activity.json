@@ -1,0 +1,48 @@
+{
+  "name": "flogo-REDIS",
+  "type": "flogo:activity",
+  "ref": "https://github.com/rujagtap/FlogoRedis",
+  "version": "0.0.1",
+  "title": "Redis",
+  "description": "Manage MongoDB documents in a specified collection",
+  "homepage": "https://github.com/rujagtap/FlogoRedis",
+  "input": [
+    {
+      "name": "uri",
+      "type": "string",
+      "required": true
+    },
+    
+    {
+      "name": "method",
+      "type": "string",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REPLACE",
+        "UPDATE"
+      ],
+      "value": "INSERT",
+      "required": true
+    },
+    {
+      "name": "keyName",
+      "type": "string"
+    },
+    {
+      "name": "keyValue",
+      "type": "string"
+    },
+    {
+      "name": "data",
+      "type": "object"
+    }
+  ],
+  "output": [
+    {
+      "name": "output",
+      "type": "any"
+    }
+   
+  ]
+}
